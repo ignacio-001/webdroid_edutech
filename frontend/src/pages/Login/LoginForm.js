@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./login.css";
 import axios from "axios";
 import { useLogin } from './../../hooks/useLogin';
-
 const LoginForm = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -15,7 +14,6 @@ const LoginForm = () => {
       [event.target.name]: event.target.value,
     });
   };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     login(formData);

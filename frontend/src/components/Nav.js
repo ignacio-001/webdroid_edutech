@@ -6,6 +6,10 @@ import { useAuthContext } from "./../hooks/useAuthContext";
 
 const Nav = () => {
   const { user, dispatch } = useAuthContext();
+  console.log(user);
+  let authorized;
+  if(user!=null&&user.authority=='admin')authorized=true;
+  else authorized=false;
   const { logout } = useLogout();
   const handleClick = () => {
     logout();
@@ -26,9 +30,13 @@ const Nav = () => {
   };
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
+    if(user&&user.authority=='admin')authorized=true;
+    else authorized=false;
     if (!user) {
       console.log("no user logged in ");
     } else {
+
+      console.log(authorized)
       console.log(user.email, "here");
       dispatch({ type: "LOGIN", payload: user });
       console.log("hello");
@@ -45,6 +53,13 @@ const Nav = () => {
           <button onClick={handleClick}>Logout</button>
         </div>
       )}
+      {user&&(authorized)&& (
+        <div>
+          <Link to="/createProject" style={linkStyle}>
+            Create_Project
+          </Link>
+        </div>
+      )}      
       {!user && (
         <div>
           <Link to="/login" style={linkStyle}>

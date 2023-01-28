@@ -17,12 +17,12 @@ const Login = async (req, res) => {
     }
     const match = await bcrypt.compareSync(password, user.password);
     console.log(match);
-
+    const authority=user.authority;
     if (!match) {
       throw Error("Incorrect Password");
     }
     const token=createToken(user._id);
-    res.status(200).json({email,token});
+    res.status(200).json({email,authority,token});
   } catch (error) {
     res.status(401).json({ error: error.message });
   }
