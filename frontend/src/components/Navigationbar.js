@@ -1,10 +1,11 @@
 import React from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useLogout } from "./../hooks/useLogout";
-import { useAuthContext } from "./../hooks/useAuthContext";
+import { useLogout } from "../hooks/useLogout";
+import { useAuthContext } from "../hooks/useAuthContext";
+// import Button from "react-bootstrap";
 
-const Nav = () => {
+const Navigationbar = () => {
   const { user, dispatch } = useAuthContext();
   console.log(user);
   let authorized;
@@ -17,7 +18,7 @@ const Nav = () => {
   const navStyle = {
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "center",
+    alignItems: "left",
     backgroundColor: "#333",
     color: "#fff",
     padding: "10px 20px",
@@ -27,6 +28,7 @@ const Nav = () => {
     color: "#fff",
     textDecoration: "none",
     marginRight: "10px",
+    alignItems: "left",
   };
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
@@ -44,10 +46,13 @@ const Nav = () => {
     }
   }, []);
   return (
+    <>
     <nav style={navStyle}>
           <Link to="/" style={linkStyle}>
             Home
           </Link>
+          <Link to="/softwares" style={linkStyle}>Software Projects</Link>
+          <Link to="/hardwares" style={linkStyle}>Hardware Projects</Link>
       {user && (
         <div>
           <button onClick={handleClick}>Logout</button>
@@ -71,6 +76,7 @@ const Nav = () => {
         </div>
       )}
     </nav>
+    </>
   );
 };
-export default Nav;
+export default Navigationbar;
