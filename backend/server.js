@@ -11,10 +11,8 @@ app.use((req, res, next) => {
   console.log(req.path, req.method);
   next()
 })
-// this below comment should be used for protecting other routes
-// app.use(requireAuth);
 
-app.use('/api/login',loginRoutes)
+app.use('/api',loginRoutes)
 app.use('/api/project',projectRoutes)
 mongoose.connect(process.env.MONGO_URL).then(()=>
 app.listen(process.env.PORT, () => {

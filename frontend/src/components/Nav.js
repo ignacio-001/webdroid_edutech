@@ -35,7 +35,6 @@ const Nav = () => {
     if (!user) {
       console.log("no user logged in ");
     } else {
-
       console.log(authorized)
       console.log(user.email, "here");
       dispatch({ type: "LOGIN", payload: user });

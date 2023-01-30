@@ -1,4 +1,9 @@
+const Project=require('../models/productModel')
+
 const projectForm=(req,res)=>{
-    const Form=req.body();
-    console.log(Form);
+    const form=req.body;
+    console.log(form);
+    res.send(form);
+    Project.create(form);
 }
+module.exports=projectForm;

@@ -24,18 +24,18 @@ const projectSchema=new Schema({
         type:Object
     },
     video_link_free:{
-        type:URL
+        type:String
     },
     //link available after purchase
     video_link_paid:{
-        type:URL
+        type:String
     },
     synopsis:{
-        type:Document
+        type:Buffer
     },
     //available after purchase
     full_report:{
-        type:Document
+        type:Buffer
     },
     //paid user list is maitained for users who bought the course
     paid_user:{
