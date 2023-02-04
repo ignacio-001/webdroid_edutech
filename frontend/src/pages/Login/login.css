@@ -1,9 +1,15 @@
-.login-form {
+/* .as {
+  background: linear-gradient( 180deg, red, yellow, green, blue 80% );
+} */
+
+form {
     width: 400px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: white;
+    margin-top: 100px;
   }
   
   .login-label {

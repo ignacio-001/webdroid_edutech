@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./login.css";
-import axios from "axios";
 import { useLogin } from './../../hooks/useLogin';
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -20,7 +19,8 @@ const LoginForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="login-form">
+    <div className="as">
+      <form onSubmit={handleSubmit}>
       <label className="login-label">
         Email:
         <input
@@ -48,6 +48,7 @@ const LoginForm = () => {
       </button>
       {error&&<div  >Sorry :( {error} </div>}
     </form>
+    </div>
   );
 };
 
