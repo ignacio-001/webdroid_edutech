@@ -11,6 +11,7 @@ import Hardwares from "./Hardwares";
 import ProjectPage from "./Project/ProjectPage";
 import soft from "../images/software.jpg";
 import { Button, Card } from "react-bootstrap";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/createProject" element={<ProjectForm />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </AuthContextProvider>
       {/* <ProjectPage embedId="ElZfdU54Cp8" /> */}
@@ -41,60 +43,78 @@ const HomePage = () => {
       </h1>
       <img className="heroImg" src={soft} alt="Sample_software_photo" />
       <div className="row">
-        <Card style={{ width: "18rem" }}>
+        <Card className="card-item" style={{ width: "18rem" }}>
           <Card.Img variant="top" src={soft} />
           <Card.Body>
-            <Card.Title>Softwars</Card.Title>
+            <Card.Title>Softwares</Card.Title>
             <Card.Text>
-              Looking for some softwares Projects... Here we have some....
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur quia, quod, voluptas, voluptate quae.
             </Card.Text>
             <Button variant="primary" href="/softwares">
               Go to Softwares
             </Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: "18rem" }}>
+        <Card className="card-item" style={{ width: "18rem" }}>
           <Card.Img variant="top" src={soft} onClick={Softwares} />
           <Card.Body>
-            <Card.Title>Softwars</Card.Title>
+            <Card.Title>Softwares</Card.Title>
             <Card.Text>
-              Looking for some softwares Projects... Here we have some....
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernaturs quia, quod, voluptas, voluptate quae.
             </Card.Text>
             <Button variant="primary" href="/softwares">
               Go to Softwares
             </Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: "18rem" }}>
+        <Card className="card-item" style={{ width: "18rem" }}>
           <Card.Img variant="top" src={soft} />
           <Card.Body>
-            <Card.Title>Softwars</Card.Title>
+            <Card.Title>Softwares</Card.Title>
             <Card.Text>
-              looking for some softwares Projects... Here we have some....
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernaturs quia, quod, voluptas, voluptate quae.
             </Card.Text>
             <Button variant="primary" href="/softwares">
               Go to Softwares
             </Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: "18rem" }}>
+        <Card className="card-item" style={{ width: "18rem" }}>
           <Card.Img variant="top" src={soft} />
           <Card.Body>
-            <Card.Title>Softwars</Card.Title>
+            <Card.Title>Softwares</Card.Title>
             <Card.Text>
-              looking for some softwares Projects... Here we have some....
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernaturs quia, quod, voluptas, voluptate quae.
             </Card.Text>
             <Button variant="primary" href="/softwares">
               Go to Softwares
             </Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: "18rem" }}>
+        <Card className="card-item" style={{ width: "18rem" }}>
           <Card.Img variant="top" src={soft} />
           <Card.Body>
-            <Card.Title>Softwars</Card.Title>
+            <Card.Title>Softwares</Card.Title>
             <Card.Text>
-              looking for some softwares Projects... Here we have some....
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernaturs quia, quod, voluptas, voluptate quae.
+            </Card.Text>
+            <Button variant="primary" href="/softwares">
+              Go to Softwares
+            </Button>
+          </Card.Body>
+        </Card>
+        <Card className="card-item" style={{ width: "18rem" }}>
+          <Card.Img variant="top" src={soft} />
+          <Card.Body>
+            <Card.Title>Softwares</Card.Title>
+            <Card.Text>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernaturs quia, quod, voluptas, voluptate quae.
             </Card.Text>
             <Button variant="primary" href="/softwares">
               Go to Softwares
