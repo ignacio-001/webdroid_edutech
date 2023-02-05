@@ -1,6 +1,7 @@
-const express=require('express');
-const projectForm=require('../controller/projectForm')
-const routes=express.Router();
-routes.post('./form');
-routes.post('/projectForm',projectForm);
-module.exports=routes;
+const express = require("express");
+const projectForm = require("../controller/projectForm");
+const showProject = require("../controller/showProjectController");
+const routes = express.Router();
+routes.post("/projectForm", projectForm);
+routes.get("/allproject", showProject);
+module.exports = routes;

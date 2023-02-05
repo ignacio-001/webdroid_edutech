@@ -2,21 +2,27 @@ import React, { useState } from "react";
 import "./login.css";
 import axios from "axios";
 import { useLogin } from './../../hooks/useLogin';
+import { useNavigate } from "react-router-dom";
+
 const LoginForm = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
-  const { login, loading, error }=useLogin();
+  const { login, loading, error } = useLogin();
+  const navigate = useNavigate();
+
   const handleChange = (event) => {
     setFormData({
       ...formData,
       [event.target.name]: event.target.value,
     });
   };
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    login(formData);
+    const response = await login(formData);
+      navigate("/allProjects");
+    
   };
 
   return (
@@ -46,7 +52,7 @@ const LoginForm = () => {
       <button className="login-button" type="submit">
         Login
       </button>
-      {error&&<div  >Sorry :( {error} </div>}
+      {error && <div>Sorry :( {error} </div>}
     </form>
   );
 };
