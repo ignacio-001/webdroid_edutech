@@ -1,0 +1,28 @@
+.hero {
+    background-attachment: fixed;
+}
+
+.heroText {
+    font-size: 6rem;
+    margin-left: 5%;
+    position: absolute;
+    font-weight: 900;
+    text-transform: uppercase;
+    width: 680px;
+    top: 120px;
+    z-index: 1;
+    color: rgb(199, 251, 255);
+}
+
+.heroImg {
+    width: 100%;
+    z-index: -1;
+    margin-bottom: -150px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0));
+}
+
+div .row {
+    align-items: center;
+    gap: 10vh;
+    justify-content: center;
+}
