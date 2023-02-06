@@ -14,7 +14,7 @@ const projectSchema=new Schema({
     },
     free:{
         type:Boolean,
-        require:true
+        // require:true
     },
     price:{
         type:Number,

@@ -41,7 +41,7 @@ const ProjectForm = () => {
           description: "",
           free: true,
           price: 0,
-          technology: {},
+          technology: "" ,
           video_link_free: "",
           video_link_paid: "",
           synopsis: "",
