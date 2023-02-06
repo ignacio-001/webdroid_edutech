@@ -27,10 +27,10 @@ const Home = () => {
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/createProject" element={<ProjectForm />} />
           </Routes>
-          <Footer />
         </BrowserRouter>
       </AuthContextProvider>
-      {/* <ProjectPage embedId="ElZfdU54Cp8" /> */}
+      {/* <ProjectPage embedId="" /> */}
+      <Footer />
     </div>
   );
 };
