@@ -1,10 +1,7 @@
-import express from 'express';
-import projectForm from '../controller/projectForm.js';
-
-// const express=require('express');
-// const projectForm=require('../controller/projectForm')
+const express = require("express");
+const projectForm = require("../controller/projectForm");
+const showProject = require("../controller/showProjectController");
 const routes = express.Router();
-routes.post('./form');
-routes.post('/projectForm', projectForm);
-// module.exports=routes;
-export default routes;
+routes.post("/projectForm", projectForm);
+routes.get("/allproject", showProject);
+module.exports = routes;
