@@ -29,8 +29,8 @@ const Home = () => {
           </Routes>
         </BrowserRouter>
       </AuthContextProvider>
-      {/* <ProjectPage embedId="" /> */}
-      <Footer />
+      <ProjectPage embedId="" />
+      {/* <Footer /> */}
     </div>
   );
 };
