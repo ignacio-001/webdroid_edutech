@@ -1,3 +1,6 @@
+import mongoose from "mongoose";
+
+const Schema = mongoose.Schema;
 const projectSchema = new Schema({
     name: {
         type: String,
@@ -40,3 +43,4 @@ const projectSchema = new Schema({
         type: Array,
     },
 });
+export default mongoose.model("Project", projectSchema);
