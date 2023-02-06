@@ -30,7 +30,7 @@ const Home = () => {
         </BrowserRouter>
       </AuthContextProvider>
       <ProjectPage embedId="" />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
@@ -46,7 +46,7 @@ const HomePage = () => {
         <Card className="card-item" style={{ width: "18rem" }}>
           <Card.Img variant="top" src={soft} />
           <Card.Body>
-            <Card.Title>Softwares</Card.Title>
+            <Card.Title>Software Projects</Card.Title>
             <Card.Text>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Aspernatur quia, quod, voluptas, voluptate quae.
@@ -82,7 +82,7 @@ const HomePage = () => {
             </Button>
           </Card.Body>
         </Card>
-        <Card className="card-item" style={{ width: "18rem" }}>
+        {/* <Card className="card-item" style={{ width: "18rem" }}>
           <Card.Img variant="top" src={soft} />
           <Card.Body>
             <Card.Title>Softwares</Card.Title>
@@ -120,7 +120,7 @@ const HomePage = () => {
               Go to Softwares
             </Button>
           </Card.Body>
-        </Card>
+        </Card> */}
       </div>
     </div>
   );
