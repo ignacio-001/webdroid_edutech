@@ -6,13 +6,14 @@
     font-family: "Poppins", sans-serif;
 }
 
-body {
+
+/* body {
     display: flex;
-    /* background: #333 !important; */
+    background: #333 !important;
     justify-content: flex-end;
     align-items: flex-end;
     min-height: 100vh;
-}
+} */
 
 .footer {
     position: relative;
