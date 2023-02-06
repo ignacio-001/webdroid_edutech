@@ -1,4 +1,5 @@
-const Project=require('../models/productModel')
+import Project from '../models/productModel.js';
+// const Project=require('../models/productModel')
 
 const projectForm= async (req,res)=>{
     const form=req.body;
@@ -10,4 +11,4 @@ const projectForm= async (req,res)=>{
         res.status(500).json({ message: error.message });
       }
 }
-module.exports=projectForm;
+export default projectForm;

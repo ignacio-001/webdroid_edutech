@@ -1,45 +1,46 @@
-const mongoose=require('mongoose');
-const Schema=mongoose.Schema;
-const projectSchema=new Schema({
-    name:{
-        type:String,
-        required:true
+import mongoose from "mongoose";
+
+const Schema = mongoose.Schema;
+const projectSchema = new Schema({
+    name: {
+        type: String,
+        required: true,
     },
-    category:{
-        type:String,
-        default:'misc'
+    category: {
+        type: String,
+        default: "misc",
     },
-    description:{
-        type:String,
+    description: {
+        type: String,
     },
     free:{
         type:Boolean,
         // require:true
     },
-    price:{
-        type:Number,
-        default:'0'
+    price: {
+        type: Number,
+        default: "0",
     },
-    technology:{
-        type:String
+    technology: {
+        type: Object,
     },
-    video_link_free:{
-        type:String
+    video_link_free: {
+        type: String,
     },
     //link available after purchase
-    video_link_paid:{
-        type:String
+    video_link_paid: {
+        type: String,
     },
-    synopsis:{
-        type:String
+    synopsis_url: {
+        type: String,
     },
     //available after purchase
-    full_report:{
-        type:String
+    full_report_url: {
+        type: String,
     },
     //paid user list is maitained for users who bought the course
-    paid_user:{
-        type:Array
-    }
-})
-module.exports=mongoose.model('Project',projectSchema);
+    paid_user: {
+        type: Array,
+    },
+});
+export default mongoose.model("Project", projectSchema);
