@@ -10,7 +10,7 @@ import Softwares from "./Softwares";
 import Hardwares from "./Hardwares";
 import ProjectPage from "./Project/ProjectPage";
 import soft from "../images/software.jpg";
-import { Button, Card } from "react-bootstrap";
+// import { Button, Card } from "react-bootstrap";
 import Footer from "../components/Footer";
 
 const Home = () => {
@@ -43,7 +43,7 @@ const HomePage = () => {
       </h1>
       <img className="heroImg" src={soft} alt="Sample_software_photo" />
       <div className="row">
-        <Card className="card-item" style={{ width: "18rem" }}>
+        {/* <Card className="card-item" style={{ width: "18rem" }}>
           <Card.Img variant="top" src={soft} />
           <Card.Body>
             <Card.Title>Software Projects</Card.Title>
@@ -81,7 +81,7 @@ const HomePage = () => {
               Go to Softwares
             </Button>
           </Card.Body>
-        </Card>
+        </Card> */}
         {/* <Card className="card-item" style={{ width: "18rem" }}>
           <Card.Img variant="top" src={soft} />
           <Card.Body>
