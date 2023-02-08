@@ -70,7 +70,7 @@ const NavBar = () => {
           {authorized ? <Link to="/admin">Admin</Link> : null}
         </ul>
       </nav> */}
-      <div className="navbar__links">
+      <div className="navbar__links grid">
         <Link className="nav__item" to="/">
           Home
         </Link>

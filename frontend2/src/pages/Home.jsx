@@ -30,7 +30,7 @@ const Home = () => {
         </BrowserRouter>
       </AuthContextProvider>
       {/* <ProjectPage embedId="" /> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
