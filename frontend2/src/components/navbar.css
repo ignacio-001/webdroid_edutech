@@ -1,21 +1,27 @@
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 3fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr 1fr;
     justify-content: space-between;
     align-items: center;
 }
 
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
 .navbar {
-    padding: 1.5rem;
+    padding: .5rem 8rem;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 2;
-    background: rgba(3, 3, 3, 0.598);
+    /* background: #2c2c2c; */
+    background: linear-gradient( 270deg, var(--primary-color) 0%, var(--secondary-color) 100%);
 }
 
 .navbar__logo strong {
-    font-size: 2.25rem;
+    font-size: 3rem;
     font-weight: 600;
     color: white;
     text-decoration: none;
@@ -34,5 +40,29 @@
 }
 
 .navbar__links>*:active {
-    color: #ffb2ff;
+    color: #cecece;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+    .navbar__logo strong {
+        font-size: 2rem;
+    }
+    .navbar__links>* {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+    .navbar__logo strong {
+        font-size: 1.5rem;
+    }
+    .navbar__links>* {
+        font-size: 0.6rem;
+    }
 }

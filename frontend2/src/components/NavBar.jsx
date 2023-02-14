@@ -8,8 +8,9 @@ import { useAuthContext } from "../hooks/useAuthContext";
 // import { Navbar, Nav, Button, NavDropdown } from "react-bootstrap";
 
 const NavBar = () => {
-  const [showDropdown, setShowDropdown] = useState(false);
-  const [showDropdown2, setShowDropdown2] = useState(false);
+  const [click, setClick] = useState(false);
+
+  const handleNavClick = () => setClick(!click);
 
   const { user, dispatch } = useAuthContext();
   let authorized;
@@ -37,175 +38,59 @@ const NavBar = () => {
   }, []);
 
   return (
-    <header className="navbar">
-      {/* <nav>
-        <ul className="navbar__links">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/aboutus">About Us</Link>
-          </li>
-          <li>
-            <Link to="/softwares">Software Projects</Link>
-          </li>
-          <li>
-            <Link to="/hardwares">Hardware Projects</Link>
-          </li>
-          <li>
-            <Link to="/createProject">Free Projects</Link>
-          </li>
-          {user ? (
-            <Link to="/profile">Profile</Link>
-          ) : (
-            <Link to="/login">Login</Link>
-          )}
-          {user ? (
-            <Link to="/" onClick={handleClick}>
-              Logout
-            </Link>
-          ) : (
-            <Link to="/signup">Signup</Link>
-          )}
-          {authorized ? <Link to="/admin">Admin</Link> : null}
-        </ul>
-      </nav> */}
-      <div className="navbar__links grid">
-        <Link className="nav__item" to="/">
-          Home
-        </Link>
-        <Link className="nav__item" to="/softwares">
-          Software Projects
-        </Link>
-        <Link className="nav__item" to="/hardwares">
-          Hardware Projects
-        </Link>
+    <>
+      <div className="nav__icon" onClick={handleNavClick}>
+        <i className={click ? "fas fa-times" : "fas fa-bars"} />
+      </div>
+      <header className="navbar grid">
+        <div className="navbar__links flex">
+          <Link className="nav__item" to="/">
+            Home
+          </Link>
+          <Link className="nav__item" to="/softwares">
+            Software Projects
+          </Link>
+          <Link className="nav__item" to="/hardwares">
+            Hardware Projects
+          </Link>
+        </div>
         <div className="navbar__logo">
           <Link className="nav__item" to="/">
             <strong>WebDroid</strong>
           </Link>
         </div>
-        <Link className="nav__item" to="/freeprojects">
-          Free Projects
-        </Link>
-        <Link className="nav__item" to="/aboutus">
-          About Us
-        </Link>
-        {user ? (
-          <Link className="nav__item" to="/profile">
-            Profile
+        <div className="navbar__links flex">
+          <Link className="nav__item" to="/freeprojects">
+            Free Projects
           </Link>
-        ) : (
-          <Link className="nav__item" to="/login">
-            Login
+          <Link className="nav__item" to="/aboutus">
+            About Us
           </Link>
-        )}
-        {user ? (
-          <Link className="nav__item" to="/" onClick={handleClick}>
-            Logout
-          </Link>
-        ) : (
-          console.log("hello")
-        )}
-        {authorized ? (
-          <Link className="nav__item" to="/admin">
-            Admin
-          </Link>
-        ) : null}
-      </div>
-    </header>
-    // <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-    //   <Container className="header">
-    //     <Navbar.Brand href="/">
-    //       <strong>WebDroid</strong>
-    //     </Navbar.Brand>
-    //     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-    //     <Navbar.Collapse id="responsive-navbar-nav">
-    //       <Nav
-    //         className="me-auto my-2 my-lg-0"
-    //         style={{ maxHeight: "100px" }}
-    //         navbarScroll
-    //       >
-    //         <Nav.Link href="/">Home</Nav.Link>
-    //         <Nav.Link href="/aboutus">About Us</Nav.Link>
-    //         <NavDropdown
-    //           onMouseLeave={() => setShowDropdown(false)}
-    //           onMouseOver={() => setShowDropdown(true)}
-    //           show={showDropdown}
-    //           menuVariant="dark"
-    //           title="Software Projects"
-    //           id="collasible-nav-dropdown"
-    //           renderMenuOnMount={true}
-    //           style={{ marginTop: "0" }}
-    //         >
-    //           <NavDropdown.Item href="/webbased">
-    //             Web-Based Projects
-    //           </NavDropdown.Item>
-    //           <NavDropdown.Item href="/softwares">Android</NavDropdown.Item>
-    //           <NavDropdown.Item href="/python">Python</NavDropdown.Item>
-    //           <NavDropdown.Item href="/blockchain">Blockchain</NavDropdown.Item>
-    //           <NavDropdown.Item href="/cloud">Cloud</NavDropdown.Item>
-    //           <NavDropdown.Item href="/matlab">Matlab</NavDropdown.Item>
-    //           {/* <NavDropdown.Divider />
-    //           <NavDropdown.Item href="/softwares">
-    //             And many more
-    //           </NavDropdown.Item> */}
-    //         </NavDropdown>
-    //         <NavDropdown
-    //           onMouseLeave={() => setShowDropdown2(false)}
-    //           onMouseOver={() => setShowDropdown2(true)}
-    //           show={showDropdown2}
-    //           menuVariant="dark"
-    //           title="Hardware Projects"
-    //           id="collasible-nav-dropdown"
-    //           renderMenuOnMount={true}
-    //           style={{ marginTop: "0" }}
-    //         >
-    //           <NavDropdown.Item href="/iot">IoT/Robotics</NavDropdown.Item>
-    //           <NavDropdown.Item href="/drone">Drone</NavDropdown.Item>
-    //           {/* <NavDropdown.Divider />
-    //           <NavDropdown.Item href="/hardwares">
-    //             And many more
-    //           </NavDropdown.Item> */}
-    //         </NavDropdown>
-    //         <Nav.Link href="/freeprojects">Free Projects</Nav.Link>
-    //       </Nav>
-    //       {user && authorized && (
-    //         <Nav className="me-auto my-2 my-lg-0">
-    //           <Nav.Link as={Link} to="/createProject">
-    //             Create Project
-    //           </Nav.Link>
-    //         </Nav>
-    //       )}
-    //       {!user && (
-    //         <Nav class="ms-auto mb-2 mg-lg-0">
-    //           {/* <Nav.Link as={Link} to="/login">
-    //         Login
-    //       </Nav.Link> */}
-    //           <Button variant="outline-primary" href="/login">
-    //             Login
-    //           </Button>{" "}
-    //           {/* <Nav.Link as={Link} to="/signup">
-    //         Signup
-    //       </Nav.Link> */}
-    //           <Button href="/signup">SignUp</Button>{" "}
-    //         </Nav>
-    //       )}
-    //       {user && (
-    //         <Nav class="ms-auto mb-2 mg-lg-0">
-    //           <Button
-    //             variant="outline-danger"
-    //             onClick={handleClick}
-    //             // onClick={()=>navigate("/")}
-    //             // style={{ float: "right", marginLeft: 800 }}
-    //           >
-    //             Logout
-    //           </Button>
-    //         </Nav>
-    //       )}
-    //     </Navbar.Collapse>
-    //   </Container>
-    // </Navbar>
+          {user ? (
+            <Link className="nav__item" to="/createProject">
+              Profile
+            </Link>
+          ) : (
+            <Link className="nav__item" to="/login">
+              Login
+            </Link>
+          )}
+          {user ? (
+            <Link className="nav__item" to="/" onClick={handleClick}>
+              Logout
+            </Link>
+          ) : (
+            console.log("hello")
+          )}
+          {authorized ? (
+            <Link className="nav__item" to="/admin">
+              Admin
+            </Link>
+          ) : null}
+        </div>
+      </header>
+      <div className={click ? "navbar__mobile active" : "navbar__mobile"}></div>
+    </>
   );
 };
 
