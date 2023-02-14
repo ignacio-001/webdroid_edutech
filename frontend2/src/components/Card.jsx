@@ -22,9 +22,6 @@ const Card = (props) => {
           </div>
           <div class="product-links">
             <a href="">
-              <i class="fa fa-heart"></i>
-            </a>
-            <a href="">
               <i class="fa fa-shopping-cart"></i>
             </a>
           </div>

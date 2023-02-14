@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./signup.css";
+// import "./signup.css";
 import { useSignup } from "../../hooks/useSignup";
 const SignupPage = () => {
   const { signup, loading, error } = useSignup();
@@ -21,45 +21,44 @@ const SignupPage = () => {
     signup(formData);
   };
   return (
-    <form onSubmit={handleSubmit} className="signup-form">
-      <label className="signup-label">
-        Email:
+    <div className="mainbody">
+      <form onSubmit={handleSubmit}>
+        <h3>Sign Up</h3>
+        <label>Email: </label>
         <input
-          className="signup-input"
           type="email"
           name="email"
+          placeholder="Type your Email here"
           value={formData.email}
           onChange={handleChange}
+          required
         />
-      </label>
-      <br />
-      <label className="signup-label">
-        Password:
+        <label>Password: </label>
         <input
-          className="signup-input"
           type="password"
           name="password"
+          placeholder="Type your Password here"
           value={formData.password}
           onChange={handleChange}
+          required
         />
-      </label>
-      <br />
-      <label className="signup-label">
-        Confirm Password:
-        <input
-          className="signup-input"
-          type="password"
-          name="confirmPassword"
-          value={formData.confirmPassword}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <button disabled={loading} className="signup-button" type="submit">
-        Sign Up
-      </button>
-      {error&&<div  >Sorry :( {error} </div>}
-    </form>
+        <label>
+          Confirm Password:
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="Re-Type your Password here"
+            value={formData.confirmPassword}
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <button disabled={loading} type="submit">
+          Sign Up
+        </button>
+        {error && <div>Sorry :( {error} </div>}
+      </form>
+    </div>
   );
 };
 

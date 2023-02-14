@@ -40,7 +40,7 @@ const NavBar = () => {
   return (
     <>
       <div className="nav__icon" onClick={handleNavClick}>
-        <i className={click ? "fas fa-times" : "fas fa-bars"} />
+        {/* <i className={click ? "fas fa-times" : "fas fa-bars"} /> */}
       </div>
       <header className="navbar grid">
         <div className="navbar__links flex">
@@ -67,24 +67,22 @@ const NavBar = () => {
             About Us
           </Link>
           {user ? (
-            <Link className="nav__item" to="/createProject">
-              Profile
-            </Link>
+            <Link className="nav__item" to="/createProject"></Link>
           ) : (
             <Link className="nav__item" to="/login">
-              Login
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
             </Link>
           )}
           {user ? (
             <Link className="nav__item" to="/" onClick={handleClick}>
-              Logout
+              <i class="fa-solid fa-user"></i>
             </Link>
           ) : (
             console.log("hello")
           )}
           {authorized ? (
             <Link className="nav__item" to="/admin">
-              Admin
+              {/* Admin */}
             </Link>
           ) : null}
         </div>

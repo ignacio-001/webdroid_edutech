@@ -2,7 +2,7 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginForm from "./pages/Login/LoginPage";
-import SignupPage from "./pages/Signup/SignupForm";
+import SignupPage from "./pages/Signup/SignupPage";
 import { AuthContextProvider } from "./Context/AuthContext";
 import ProjectForm from "./pages/projectForm";
 import Softwares from "./pages/Softwares";
