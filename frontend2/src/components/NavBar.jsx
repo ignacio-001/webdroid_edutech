@@ -4,8 +4,6 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useLogout } from "../hooks/useLogout";
 import { useAuthContext } from "../hooks/useAuthContext";
-// import Container from "react-bootstrap/Container";
-// import { Navbar, Nav, Button, NavDropdown } from "react-bootstrap";
 
 const NavBar = () => {
   const [click, setClick] = useState(false);
@@ -67,7 +65,9 @@ const NavBar = () => {
             About Us
           </Link>
           {user ? (
-            <Link className="nav__item" to="/createProject"></Link>
+            <Link className="nav__item" to="/createProject">
+              Create Project
+            </Link>
           ) : (
             <Link className="nav__item" to="/login">
               <i class="fa-solid fa-arrow-right-to-bracket"></i>
@@ -87,7 +87,6 @@ const NavBar = () => {
           ) : null}
         </div>
       </header>
-      <div className={click ? "navbar__mobile active" : "navbar__mobile"}></div>
     </>
   );
 };
