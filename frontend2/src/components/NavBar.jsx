@@ -40,7 +40,12 @@ const NavBar = () => {
       <div className="nav__icon" onClick={handleNavClick}>
         {/* <i className={click ? "fas fa-times" : "fas fa-bars"} /> */}
       </div>
-      <header className="navbar grid">
+      <header className="navbar flex">
+        <div className="navbar__logo">
+          <Link to="/">
+            <strong>WebDroid</strong>
+          </Link>
+        </div>
         <div className="navbar__links flex">
           <Link className="nav__item" to="/">
             Home
@@ -51,13 +56,6 @@ const NavBar = () => {
           <Link className="nav__item" to="/hardwares">
             Hardware Projects
           </Link>
-        </div>
-        <div className="navbar__logo">
-          <Link className="nav__item" to="/">
-            <strong>WebDroid</strong>
-          </Link>
-        </div>
-        <div className="navbar__links flex">
           <Link className="nav__item" to="/freeprojects">
             Free Projects
           </Link>
@@ -69,8 +67,17 @@ const NavBar = () => {
               Create Project
             </Link>
           ) : (
-            <Link className="nav__item" to="/login">
-              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            <Link className="nav__item__icon" to="/login">
+              {/* <i class="fa-solid fa-arrow-right-to-bracket"></i> */}
+              <button className="signup__btn" type="submit">
+                Log In
+                {/* <svg>
+                  <path
+                    fill="currentColor"
+                    d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                  ></path>
+                </svg> */}
+              </button>
             </Link>
           )}
           {user ? (
@@ -86,6 +93,8 @@ const NavBar = () => {
             </Link>
           ) : null}
         </div>
+
+        {/* <div className="navbar__links flex"></div> */}
       </header>
     </>
   );

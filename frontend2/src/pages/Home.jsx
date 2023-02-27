@@ -8,13 +8,13 @@ import Carousel from "../components/Carousel";
 const Home = () => {
   return (
     <>
-      <Carousel />
+      {/* <Carousel /> */}
       <div className="hero">
         <h1 className="heroText">
           <strong>The Education Website</strong>
         </h1>
-        <img className="heroImg" src={soft} alt="Sample_software_photo" />
-        <Tabs />
+        {/* <img className="heroImg" src={soft} alt="Sample_software_photo" />
+        <Tabs /> */}
       </div>
       <div className="project__showcase">
         <h2 className="h222">Software Projects</h2>
