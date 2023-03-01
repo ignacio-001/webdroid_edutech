@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import { Container, Form, Button } from "react-bootstrap";
 import axios from "axios";
+import "./createProject.css";
 
 const ProjectForm = () => {
   const [project, setProject] = useState({
@@ -54,10 +55,111 @@ const ProjectForm = () => {
   };
 
   return (
-    <div>
-      <h1 className="text-center mt-5">Create New Project</h1>
-      <Form onSubmit={handleSubmit}>
-        <Form.Group controlId="formName">
+    <div className="createPro">
+      <form onSubmit={handleSubmit}>
+        <h3>Create New Project</h3>
+        <label>Project name </label>
+        <div className="inputBox">
+          <input 
+          type="text"
+          placeholder="Enter project name"
+          name="name"
+          onChange={handleChange}
+          required
+          />
+        </div>
+        <label>Category</label>
+        <div className="inputBox">
+          <select 
+          defaultValue="--Select--" 
+          name="category" 
+          onChange={handleChange}
+          >
+            <option>--Select--</option>
+            <option>Python</option>
+            <option>Web-Based</option>
+            <option>Android</option>
+            <option>Blockchain</option>
+            <option>Cloud</option>
+            <option> Matlab</option>
+            <option>IOT/Robotics</option>
+            <option>Drone</option>
+          </select>
+        </div>
+        <label>Description</label>
+        <div className="inputBox">
+          <textarea 
+        rows="2" 
+        cols="25"
+        placeholder="Enter a brief description of the project" 
+        name="description" 
+        onChange={handleChange}
+        />
+        </div>
+        <label>
+        
+          <input 
+        type="checkbox"
+        value="Is this project free?"
+        onChange={handleFreeChange}
+        />
+        
+          Is this project free?
+        </label>
+        <label>Price</label>
+        <div className="inputBox">
+          <input 
+        type="number"
+        placeholder="Enter price of the project"
+        value={project.price}
+        onChange={handleChange}
+        name="price"
+        />
+        </div>
+        <label>Technology</label>
+          <div className="inputBox">
+            <input
+            type="text"
+            placeholder="Enter technology used in the project"
+            value={project.technology}
+            onChange={handleChange}
+            name="technology"
+          />
+          </div>
+          <label>Video Link (Free)</label>
+          <div className="inputBox"><input
+            type="text"
+            placeholder="Enter video link for free users"
+            value={project.video_link_free}
+            onChange={handleChange}
+            name="video_link_free"
+          />
+          </div>
+          <label>Video Link (Paid)</label>
+          <div className="inputBox"><input 
+            type="text"
+            placeholder="Enter video link for paid users"
+            value={project.video_link_paid}
+            onChange={handleChange}
+            name="video_link_paid"
+          />
+          </div>
+          <label>Synopsis</label>
+          <input 
+            type="file"
+            value={project.synopsis}
+            onChange={handleChange}
+            name="synopsis"
+          />
+          <label>Full Report</label>
+          <input
+            type="file"
+            placeholder="Upload the full report for the project"
+            onChange={handleChange}
+            name="full_report"
+          />
+        <button type="submit">Create Project</button>
+        {/* <Form.Group controlId="formName">
           <Form.Label>Project Name</Form.Label>
           <Form.Control
             type="text"
@@ -158,8 +260,8 @@ const ProjectForm = () => {
         </Form.Group>
         <Button variant="primary" type="submit">
           Create Project
-        </Button>
-      </Form>
+        </Button> */}
+      </form>
     </div>
   );
 };

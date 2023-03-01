@@ -3,20 +3,20 @@ import soft from '../images/software.jpg';
 import Card from "../components/Card";
 import "./domain.css";
 
-function Webbased() {
+function Blockchain() {
     return (
         <div >
             <img src={soft} alt="Sample_software_photo" href="/login"
-            style={{ 
-                width: "100%", 
-                height: "400px", 
-                marginTop: "0px",
-                }} />
+            style={{
+          width: "100%",
+          height: "400px",
+          marginTop: "0px",
+        }} />
             <div className="domain__container">
-                <h1>Web-Based Projects</h1>
+                <h1>Blockchain Projects</h1>
                 <div className="outer__cards">
                     <h3>
-                        Top Web-Based Projects<br/><br />
+                        Top Blockchain Projects<br/><br />
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
                     nihil sunt distinctio animi non explicabo voluptate nobis
                     pariatur tempora dolore assumenda rem sit, quas id facilis
@@ -46,7 +46,7 @@ function Webbased() {
                     />
                 </div>
                 <div className='outer__card'>
-                    <h3>The list of web-based projects: </h3>
+                    <h3>The list of blockchain projects: </h3>
                     <ul>
                         <li><a href="/">Project 1 - Project Name</a></li>
                         <li><a href="/">Project 2 - Project Name</a></li>
@@ -64,4 +64,4 @@ function Webbased() {
     );
 }
 
-export default Webbased;
+export default Blockchain;

@@ -1,6 +1,8 @@
 import React from "react";
 import soft from "../images/software.jpg";
-import Card from "../components/Card";
+import pyth from "../images/python.jpeg";
+// import Card from "../components/Card";
+import "./Softwares.css";
 
 function Softwares() {
   return (
@@ -15,7 +17,83 @@ function Softwares() {
           marginTop: "0px",
         }}
       />
-      <div className="row flex">
+      <section className="section-container">
+        <div className="container">
+        <h1>Software Project Domains</h1>
+        <div className="cards">
+        <div className="card">
+          <h3>Python Projects</h3>
+          <img
+        src={pyth}
+        alt="Sample_software_photo"
+        href="/login"
+        style={{
+          width: "100%",
+          height: "auto",
+        }}
+      />
+            <a className="card-btn" href="/python">Explore</a>
+        </div>
+        <div className="card">
+          <h3>Web-Based Projects</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A impedit eius expedita 
+            quasi neque, beatae dolore natus nostrum repudiandae possimus molestias mollitia vel 
+            veniam doloribus, rem omnis consequuntur perspiciatis? Quod.</p>
+            <a className="card-btn" href="/webbased">Explore</a>
+        </div>
+        <div className="card">
+          <h3>Android Projects</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A impedit eius expedita 
+            quasi neque, beatae dolore natus nostrum repudiandae possimus molestias mollitia vel 
+            veniam doloribus, rem omnis consequuntur perspiciatis? Quod.</p>
+            <a className="card-btn" href="/android">Explore</a>
+        </div>
+        <div className="card">
+          <h3>Cloud Projects</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A impedit eius expedita 
+            quasi neque, beatae dolore natus nostrum repudiandae possimus molestias mollitia vel 
+            veniam doloribus, rem omnis consequuntur perspiciatis? Quod.</p>
+            <a className="card-btn" href="/python">Explore</a>
+        </div>
+        <div className="card">
+          <h3>Blockchain Projects</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A impedit eius expedita 
+            quasi neque, beatae dolore natus nostrum repudiandae possimus molestias mollitia vel 
+            veniam doloribus, rem omnis consequuntur perspiciatis? Quod.</p>
+            <a className="card-btn" href="/blockchain">Explore</a>
+        </div>
+        <div className="card">
+          <h3>Card 6</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A impedit eius expedita 
+            quasi neque, beatae dolore natus nostrum repudiandae possimus molestias mollitia vel 
+            veniam doloribus, rem omnis consequuntur perspiciatis? Quod.</p>
+            <a className="card-btn" href="/python">Explore</a>
+        </div>
+        <div className="card">
+          <h3>Card 7</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A impedit eius expedita 
+            quasi neque, beatae dolore natus nostrum repudiandae possimus molestias mollitia vel 
+            veniam doloribus, rem omnis consequuntur perspiciatis? Quod.</p>
+            <button className="card-btn">Explore</button>
+        </div>
+        <div className="card">
+          <h3>Card 8</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A impedit eius expedita 
+            quasi neque, beatae dolore natus nostrum repudiandae possimus molestias mollitia vel 
+            veniam doloribus, rem omnis consequuntur perspiciatis? Quod.</p>
+            <a className="card-btn" href="/python">Explore</a>
+        </div>
+        <div className="card">
+          <h3>Card 9</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A impedit eius expedita 
+            quasi neque, beatae dolore natus nostrum repudiandae possimus molestias mollitia vel 
+            veniam doloribus, rem omnis consequuntur perspiciatis? Quod.</p>
+            <a className="card-btn" href="/python">Explore</a>
+        </div>
+      </div>
+      </div>
+      </section>
+      {/* <div className="row flex">
         <Card
           title="Some Python Projects"
           image="https://picsum.photos/200/300?random=1"
@@ -62,7 +140,7 @@ function Softwares() {
           description="Want to explore some matlab projects.... Here we have...."
           link="/matlab"
         />
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -67,7 +67,7 @@ const NavBar = () => {
             About Us
           </Link>
           {user ? (
-            <Link className="nav__item" to="/createProject"></Link>
+            <Link className="nav__item" to="/createProject">Create Project</Link>
           ) : (
             <Link className="nav__item" to="/login">
               <i class="fa-solid fa-arrow-right-to-bracket"></i>

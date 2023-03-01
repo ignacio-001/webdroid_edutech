@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./login.css";
 import { useLogin } from "../../hooks/useLogin";
+import { useNavigate } from "react-router-dom";
 const LoginPage = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -13,9 +14,11 @@ const LoginPage = () => {
       [event.target.name]: event.target.value,
     });
   };
+  const navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
     login(formData);
+    navigate("/");
   };
 
   return (
