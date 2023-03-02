@@ -1,0 +1,42 @@
+.domain__card {
+    height: 20ch;
+    width: 20ch;
+    /* padding: 1rem; */
+    margin: 0 10px 10px 0;
+    border-radius: 15%;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    background-color: #5cff75;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    background: linear-gradient(720deg, hsla(149, 100%, 68%, 0.699) 0%, hsla(151, 100%, 48%, 0.699) 28%, hsla(151, 100%, 38%, 0.694) 100%);
+}
+
+.domain__card:hover {
+    transform: scale(1.025);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    filter: brightness(80%) saturate(120%);
+}
+
+.domain__card__content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.domain__card__image {
+    position: relative;
+    object-fit: contain;
+    overflow: hidden;
+    filter: grayscale(50%);
+    color: hsl(129, 100%, 28%);
+    /* background: rgb(0, 255, 29); */
+}
+
+.domain__card__image:hover {
+    filter: grayscale(0%);
+    color: hsl(129, 100%, 28%);
+}

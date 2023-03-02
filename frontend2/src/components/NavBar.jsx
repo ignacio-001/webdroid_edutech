@@ -38,7 +38,7 @@ const NavBar = () => {
   return (
     <>
       <div className="nav__icon" onClick={handleNavClick}>
-        {/* <i className={click ? "fas fa-times" : "fas fa-bars"} /> */}
+        <i className={click ? "fas fa-times" : "fas fa-bars"} />
       </div>
       <header className="navbar flex">
         <div className="navbar__logo">

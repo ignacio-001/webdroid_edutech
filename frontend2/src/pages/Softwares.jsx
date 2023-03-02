@@ -1,11 +1,11 @@
 import React from "react";
 import soft from "../images/software.jpg";
-import Card from "../components/Card";
+import DomainCard from "../components/DomainCard";
 
 function Softwares() {
   return (
     <div>
-      <img
+      {/* <img
         src={soft}
         alt="Sample_software_photo"
         href="/login"
@@ -14,17 +14,10 @@ function Softwares() {
           height: "auto",
           marginTop: "0px",
         }}
-      />
+      /> */}
+      <DomainCard />
       <div className="row flex">
-        <Card
-          title="Some Python Projects"
-          image="https://picsum.photos/200/300?random=1"
-          catagory="Python"
-          description="Want to explore some python projects.... Here we have...."
-          link="/python"
-          price="299"
-        />
-        <Card
+        {/* <Card
           title="Some Web-Based Projects"
           image="https://picsum.photos/200/300?random=2"
           catagory="Web-Based"
@@ -61,7 +54,7 @@ function Softwares() {
           catagory="Matlab"
           description="Want to explore some matlab projects.... Here we have...."
           link="/matlab"
-        />
+        /> */}
       </div>
     </div>
   );

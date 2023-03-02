@@ -20,11 +20,6 @@ const Card = (props) => {
             {props.price ? "₹" : null}
             {props.price}
           </div>
-          <div class="product-links">
-            <a href="">
-              <i class="fa fa-shopping-cart"></i>
-            </a>
-          </div>
         </div>
       </div>
     </div>

@@ -18,7 +18,7 @@ function App() {
     <div>
       <AuthContextProvider>
         <BrowserRouter>
-          <NavBar />
+          {/* <NavBar /> */}
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/softwares" element={<Softwares />} />
@@ -31,7 +31,7 @@ function App() {
         </BrowserRouter>
       </AuthContextProvider>
       {/* <ProjectPage embedId="" /> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
