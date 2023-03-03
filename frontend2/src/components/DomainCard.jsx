@@ -1,5 +1,6 @@
 import React from "react";
 import "./domainCard.css";
+import { FaPython } from "react-icons/fa";
 
 const DomainCard = (props) => {
   return (
@@ -15,5 +16,7 @@ const DomainCard = (props) => {
     </>
   );
 };
+
+export default DomainCard;
 
 export default DomainCard;

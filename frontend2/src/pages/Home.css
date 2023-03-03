@@ -1,14 +1,15 @@
 .hero {
     background-attachment: fixed;
     position: relative;
-    /* background: linear-gradient( 270deg, #6cff5cd5 20%, #0f9900d5 75%); */
-    background-color: #ffffe5d5;
+    background: linear-gradient( 270deg, #6cff5cd5 20%, #0f9900d5 75%);
+    /* background-color: #6aff5fd5; */
     min-height: 50rem;
 }
 
 .heroText {
     font-size: 5rem;
-    margin-left: 5%;
+    margin: 10vh 0 0 5vw;
+    /* margin-left: 5%; */
     position: absolute;
     font-weight: 900;
     text-transform: uppercase;
@@ -18,26 +19,11 @@
     color: #2d2d2dd5;
 }
 
-.heroImg {
-    width: 100%;
-    z-index: -1;
-    margin-bottom: -150px;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0));
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0));
-}
 
-div .row {
-    align-items: center;
-    gap: 10vh;
-    justify-content: center;
-    margin: 6vw;
-}
-
-.card-item {
+/* .card-item {
     width: 20rem;
-    z-index: 99999;
     padding: 10px;
-}
+} */
 
 @media (max-width: 800px) {
     .card-item {
