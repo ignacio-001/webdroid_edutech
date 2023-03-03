@@ -18,7 +18,6 @@ const LoginPage = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     login(formData);
-    alert(`Successfully logged in as ${formData.email}`);
     navigate("/");
   };
 
