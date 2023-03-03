@@ -10,7 +10,7 @@ function Python() {
             style={{
           width: "100%",
           height: "400px",
-          marginTop: "0px",
+          marginTop: "85px",
         }} />
             <div className="domain__container">
                 <h1>Python Projects</h1>

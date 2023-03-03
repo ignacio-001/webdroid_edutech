@@ -1,10 +1,13 @@
 .hero {
     background-attachment: fixed;
     position: relative;
+    /* background: linear-gradient( 270deg, #6cff5cd5 20%, #0f9900d5 75%); */
+    background-color: #ffffe5d5;
+    min-height: 50rem;
 }
 
 .heroText {
-    font-size: 6rem;
+    font-size: 5rem;
     margin-left: 5%;
     position: absolute;
     font-weight: 900;
@@ -12,7 +15,7 @@
     width: 680px;
     top: 120px;
     z-index: 1;
-    color: #ffffffd5;
+    color: #2d2d2dd5;
 }
 
 .heroImg {
@@ -27,6 +30,7 @@ div .row {
     align-items: center;
     gap: 10vh;
     justify-content: center;
+    margin: 6vw;
 }
 
 .card-item {
@@ -50,7 +54,8 @@ div .row {
     }
 }
 
-.h222 {
+.h2 {
     margin-left: 8vw;
     text-decoration: underline;
+    font-size: 2.5rem;
 }
