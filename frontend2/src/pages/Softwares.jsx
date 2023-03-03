@@ -10,9 +10,9 @@ const Domains = [
     link: "/python",
   },
   {
-    title: "Java ",
+    title: "MatLab",
     image: "src/assets/java.webp",
-    link: "/java",
+    link: "/Matlab",
   },
   {
     title: "Android ",
@@ -23,6 +23,11 @@ const Domains = [
     title: "Web",
     image: "src/assets/web-development.webp",
     link: "/webbased",
+  },
+  {
+    title: "Blockchain",
+    image: "src/assets/blockchain.webp",
+    link: "/blockchain",
   },
   {
     title: "Cloud",

@@ -1,8 +1,8 @@
 .hero {
     background-attachment: fixed;
     position: relative;
-    background: linear-gradient( 270deg, #6cff5cd5 20%, #0f9900d5 75%);
-    /* background-color: #6aff5fd5; */
+    /* background: linear-gradient( 90deg, hsla(114, 100%, 90%, 0.835) 20%, hsla(114, 100%, 80%, 0.835) 75%); */
+    background-color: hsla(60, 100%, 95%, 0.835);
     min-height: 50rem;
 }
 
@@ -16,7 +16,7 @@
     width: 680px;
     top: 120px;
     z-index: 1;
-    color: #ffffffd5;
+    color: hsla(0, 0%, 18%, 0.835);
 }
 
 
