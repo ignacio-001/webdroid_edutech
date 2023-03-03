@@ -2,12 +2,16 @@ import React from "react";
 import "./domainCard.css";
 import { FaPython } from "react-icons/fa";
 
-const DomainCard = () => {
+const DomainCard = (props) => {
   return (
     <>
       <div className="domain__card">
-        <div className="domain__card__content">Python Projects</div>
-        <FaPython className="domain__card__image" size={250} />
+        <div className="domain__card__content">
+          <p>
+            {props.domain} <strong>Projects</strong>
+          </p>
+          <img alt="ytr" src={props.image} />
+        </div>
       </div>
     </>
   );

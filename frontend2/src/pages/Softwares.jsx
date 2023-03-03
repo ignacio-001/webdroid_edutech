@@ -1,11 +1,45 @@
 import React from "react";
 import soft from "../images/software.jpg";
 import DomainCard from "../components/DomainCard";
+import "./softwares.css";
+
+const Domains = [
+  {
+    title: "Python ",
+    image: "src/assets/python.webp",
+    link: "/python",
+  },
+  {
+    title: "Java ",
+    image: "src/assets/java.webp",
+    link: "/java",
+  },
+  {
+    title: "Android ",
+    image: "src/assets/android.webp",
+    link: "/android",
+  },
+  {
+    title: "Web",
+    image: "src/assets/web-development.webp",
+    link: "/webbased",
+  },
+  {
+    title: "Cloud",
+    image: "src/assets/cloud.webp",
+    link: "/cloud",
+  },
+  {
+    title: "IOT",
+    image: "src/assets/machine-learning.webp",
+    link: "/iot",
+  },
+];
 
 function Softwares() {
   return (
     <div>
-      {/* <img
+      <img
         src={soft}
         alt="Sample_software_photo"
         href="/login"
@@ -14,56 +48,21 @@ function Softwares() {
           height: "auto",
           marginTop: "0px",
         }}
-      /> */}
-      <DomainCard />
-      <div className="row flex">
-        {/* <Card
-          title="Some Web-Based Projects"
-          image="https://picsum.photos/200/300?random=2"
-          catagory="Web-Based"
-          description="Want to explore some web-based projects.... Here we have...."
-          link="/webbased"
-        />
-        <Card
-          title="Some Android Projects"
-          image="https://picsum.photos/200/300?random=3"
-          catagory="Android"
-          description="Want to explore some android projects.... Here we have...."
-          link="/android"
-        />
-      </div>
-      <div className="row flex">
-        <Card
-          title="Some Blockchain Projects"
-          image="https://picsum.photos/200/300?random=4"
-          catagory="Blockchain"
-          description="Want to explore some blockchain projects.... Here we have...."
-          //   price="299"
-          link="/blockchain"
-        />
-        <Card
-          title="Some Cloud Projects"
-          image="https://picsum.photos/200/300?random=5"
-          catagory="Cloud"
-          description="Want to explore some cloud projects.... Here we have...."
-          link="/cloud"
-        />
-        <Card
-          title="Some Matlab Projects"
-          image="https://picsum.photos/200/300?random=6"
-          catagory="Matlab"
-          description="Want to explore some matlab projects.... Here we have...."
-          link="/matlab"
-        /> */}
+      />
+      <div className="domain__row">
+        {Domains.map((item, index) => {
+          return (
+            <DomainCard
+              key={index}
+              domain={item.title}
+              image={item.image}
+              link={item.link}
+            />
+          );
+        })}
       </div>
     </div>
   );
 }
-
-// const hed = {
-//     display: "block",
-//     textAlign: "center",
-
-//   };
 
 export default Softwares;

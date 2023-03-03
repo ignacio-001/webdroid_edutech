@@ -1,16 +1,3 @@
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .nav__icon {
     display: none;
 }
