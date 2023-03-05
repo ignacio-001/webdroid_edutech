@@ -18,5 +18,3 @@ const DomainCard = (props) => {
 };
 
 export default DomainCard;
-
-export default DomainCard;
