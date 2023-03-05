@@ -1,12 +1,14 @@
 .domain__row {
-  margin: 0 0 0 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  height: 100%;
-  padding: 0 1rem;
-}
+    margin: 0 0 0 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    padding: 0 1rem;
+    margin-top: 20ch;
+    margin-bottom: 20ch;
+} 
