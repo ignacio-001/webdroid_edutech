@@ -1,34 +1,28 @@
-/* .as {
-  background: linear-gradient( 180deg, red, yellow, green, blue 80% );
-} */
-
-form {
+.signup-form {
     width: 400px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: white;
-    margin-top: 100px;
-}
-
-.login-label {
+  }
+  
+  .signup-label {
     display: block;
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: bold;
-}
-
-.login-input {
+  }
+  
+  .signup-input {
     width: 100%;
     padding: 12px 20px;
     margin-bottom: 10px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-.login-button {
+  }
+  
+  .signup-button {
     width: 100%;
     padding: 14px 20px;
     background-color: #4CAF50;
@@ -36,8 +30,9 @@ form {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.login-button:hover {
+  }
+  
+  .signup-button:hover {
     background-color: #3e8e41;
-}
+  }
+  

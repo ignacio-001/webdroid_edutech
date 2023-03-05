@@ -1,0 +1,34 @@
+:root {
+    --primary-color: hsl(0, 0%, 30%) 0%;
+    --secondary-color: rgba(0, 0, 0) 100%;
+    /* --primary-color: hsl(4, 90%, 58%);
+    --primary-color-tp: hsla(4, 90%, 58%, 0.5);
+    --primary-color-md: hsl(4, 90%, 38%);
+    --primary-color-dk: hsl(4, 90%, 28%);
+    --secondary-color: hsl(231, 48%, 48%);
+    --secondary-color-tp: hsla(231, 48%, 48%, 0.5);
+    --secondary-color-md: hsl(231, 48%, 38%);
+    --secondary-color-dk: hsl(231, 48%, 28%); */
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Poppins', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

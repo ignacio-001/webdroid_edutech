@@ -1,0 +1,47 @@
+.hero {
+    background-attachment: fixed;
+    position: relative;
+    background: linear-gradient( 270deg, #6cff5cd5 20%, #0f9900d5 75%);
+    /* background-color: #6aff5fd5; */
+    min-height: 50rem;
+}
+
+.heroText {
+    font-size: 5rem;
+    margin: 10vh 0 0 5vw;
+    /* margin-left: 5%; */
+    position: absolute;
+    font-weight: 900;
+    text-transform: uppercase;
+    width: 680px;
+    top: 120px;
+    z-index: 1;
+    color: #2d2d2dd5;
+}
+
+
+/* .card-item {
+    width: 20rem;
+    padding: 10px;
+} */
+
+@media (max-width: 800px) {
+    .card-item {
+        width: 30rem;
+    }
+    .heroImg {
+        margin-bottom: -100px;
+    }
+    .heroText {
+        font-size: 4rem;
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+.h2 {
+    margin-left: 8vw;
+    text-decoration: underline;
+    font-size: 2.5rem;
+}
