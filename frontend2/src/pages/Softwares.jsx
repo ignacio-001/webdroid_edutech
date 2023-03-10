@@ -1,5 +1,7 @@
 import React from "react";
 import soft from "../images/software.jpg";
+import { useNavigate } from "react-router-dom";
+
 import DomainCard from "../components/DomainCard";
 import "./softwares.css";
 
@@ -10,9 +12,9 @@ const Domains = [
     link: "/python",
   },
   {
-    title: "Java ",
+    title: "MatLab",
     image: "src/assets/java.webp",
-    link: "/java",
+    link: "/Matlab",
   },
   {
     title: "Android ",
@@ -23,6 +25,11 @@ const Domains = [
     title: "Web",
     image: "src/assets/web-development.webp",
     link: "/webbased",
+  },
+  {
+    title: "Blockchain",
+    image: "src/assets/blockchain.webp",
+    link: "/blockchain",
   },
   {
     title: "Cloud",
@@ -36,7 +43,7 @@ const Domains = [
   },
 ];
 
-function Softwares() {
+const Softwares = () => {
   return (
     <div>
       <div className="domain__row">
@@ -53,6 +60,6 @@ function Softwares() {
       </div>
     </div>
   );
-}
+};
 
 export default Softwares;

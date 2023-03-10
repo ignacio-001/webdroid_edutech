@@ -42,6 +42,7 @@ const Home = () => {
       <div className="hero">
         <h1 className="heroText">
           <strong>The Education Website</strong>
+          <button className="home__btn"></button>
         </h1>
       </div>
       <div className="project__showcase">
