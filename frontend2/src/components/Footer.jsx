@@ -4,27 +4,32 @@ import "./footer.css";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer-sec">
-        <section className="footer-distributed">
-          <h3>Share Your Ideas Here</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-            nihil sunt distinctio animi non explicabo voluptate nobis
-            pariatur tempora dolore assumenda rem sit, quas id facilis
-            officiis autem praesentium soluta.
-          </p>
-          <form action="#" method="post">
-            <input type="text" name="email" placeholder="Type your Email here" />
-            <input type="text" name="name" placeholder="Type your Name here" />
-            <textarea name="message" placeholder="Type Your Idea here"></textarea>
-            <button>Send</button>
+      <div className="footer__page">
+        <div className="footer__box">
+          <div className="illustration__wrapper">
+            <img src="https://mixkit.imgix.net/art/preview/mixkit-left-handed-man-sitting-at-a-table-writing-in-a-notebook-27-original-large.png?q=80&auto=format%2Ccompress&h=700" alt="Login"/>
+          </div>
+          <form>
+            <h3>Share Your Idea</h3>
+            {/* <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+              nihil sunt distinctio animi non explicabo voluptate nobis
+              pariatur tempora dolore assumenda rem sit, quas id facilis
+              officiis autem praesentium soluta.
+            </p> */}
+            <input type="email" name="email" placeholder="Type your Email here" required/>  
+            <input type="text" name="name" placeholder="Type your Name here" required/>
+            <input type="phone" name="phone" placeholder="Type your mobile number here" required/>
+            <input type="text" name="idea" placeholder="Type your Project Idea here" required/>
+            <button type="submit">SUBMIT</button>
           </form>
-        </section>
+        </div>
+      </div>
+      <footer className="footer-sec">
         <div className="main">
-          <div className="logo rowws">
+          <div className="logo row">
             <div className="footer-header">
               <h1>WebDroid</h1>
-              {/* <img src="https://i.postimg.cc/tgk8X2w7/manik-low-resolution-logo-white-on-transparent-background.png" class="manik" alt="" /> */}
             </div>
             <div className="logo-des">
               <p>
@@ -39,7 +44,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="link rowws">
+          <div className="link row">
             <div className="footer-header">
               <h3>Links</h3>
             </div>
@@ -61,7 +66,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="link rowws">
+          <div className="link row">
             <div className="footer-header">
               <h3>Projects</h3>
             </div>
@@ -86,7 +91,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="link rowws">
+          <div className="link row">
             <div className="footer-header">
               <h3>Projects</h3>
             </div>

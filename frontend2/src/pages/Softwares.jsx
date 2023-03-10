@@ -39,16 +39,6 @@ const Domains = [
 function Softwares() {
   return (
     <div>
-      <img
-        src={soft}
-        alt="Sample_software_photo"
-        href="/login"
-        style={{
-          width: "100%",
-          height: "auto",
-          marginTop: "0px",
-        }}
-      />
       <div className="domain__row">
         {Domains.map((item, index) => {
           return (
