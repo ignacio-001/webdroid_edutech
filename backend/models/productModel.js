@@ -13,9 +13,9 @@ const projectSchema = new Schema({
     description: {
         type: String,
     },
-    free: {
-        type: Boolean,
-        require: true,
+    free:{
+        type:Boolean,
+        // require:true
     },
     price: {
         type: Number,
