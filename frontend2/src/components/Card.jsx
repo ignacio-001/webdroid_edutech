@@ -1,27 +1,30 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./card.css";
 
 const Card = (props) => {
   return (
-    <div class="product-card">
-      <div class="badge">New</div>
-      <div class="product-tumb">
-        <img src={props.image} alt="" />
-      </div>
-      <div class="product-details">
-        <span class="product-catagory">{props.catagory}</span>
-        <h4>
-          <a href={props.link}>{props.title}</a>
-        </h4>
-        <p>{props.description}</p>
-        <div class="product-bottom-details">
-          <div class="product-price">
-            {props.price ? <small>₹999</small> : null}
-            {props.price ? "₹" : null}
-            {props.price}
+    <div className="product-card">
+      <Link to={`/project/${props.prodkey}`}>
+        <div className="badge">New</div>
+        <div className="product-tumb">
+          <img src={props.image} alt="" />
+        </div>
+        <div className="product-details">
+          <span className="product-catagory">{props.catagory}</span>
+          <h4>
+            <a href={props.link}>{props.title}</a>
+          </h4>
+          <p>{props.description}</p>
+          <div className="product-bottom-details">
+            <div className="product-price">
+              {props.price ? <small>₹999</small> : null}
+              {props.price ? "₹" : null}
+              {props.price}
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

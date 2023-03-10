@@ -1,5 +1,7 @@
 import React from "react";
 import soft from "../images/software.jpg";
+import { useNavigate } from "react-router-dom";
+
 import DomainCard from "../components/DomainCard";
 import "./softwares.css";
 
@@ -41,19 +43,9 @@ const Domains = [
   },
 ];
 
-function Softwares() {
+const Softwares = () => {
   return (
     <div>
-      <img
-        src={soft}
-        alt="Sample_software_photo"
-        href="/login"
-        style={{
-          width: "100%",
-          height: "auto",
-          marginTop: "0px",
-        }}
-      />
       <div className="domain__row">
         {Domains.map((item, index) => {
           return (
@@ -68,6 +60,6 @@ function Softwares() {
       </div>
     </div>
   );
-}
+};
 
 export default Softwares;
