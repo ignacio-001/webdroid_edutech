@@ -8,6 +8,8 @@ import { useAuthContext } from "../hooks/useAuthContext";
 const NavBar = () => {
   const [click, setClick] = useState(false);
 
+  const [dropdown, setDropdown] = useState(false);
+
   const handleNavClick = () => setClick(!click);
 
   const { user, dispatch } = useAuthContext();
@@ -50,12 +52,38 @@ const NavBar = () => {
           <Link className="nav__item" to="/">
             Home
           </Link>
-          <Link className="nav__item" to="/softwares">
-            Software Projects
-          </Link>
-          <Link className="nav__item" to="/hardwares">
-            Hardware Projects
-          </Link>
+          <div
+            className="nav__item"
+            onMouseEnter={() => setDropdown(true)}
+            onMouseLeave={() => setDropdown(false)}
+          >
+            {/* added div wrapper and onMouseEnter/onMouseLeave handlers for dropdown */}
+            <Link to="/softwares">Software Projects</Link>
+            {dropdown && (
+              <div className="dropdown">
+                {/* added dropdown div */}
+                <Link to="/software1">Software 1</Link>
+                <Link to="/software2">Software 2</Link>
+                <Link to="/software3">Software 3</Link>
+              </div>
+            )}
+          </div>
+          <div
+            className="nav__item"
+            onMouseEnter={() => setDropdown2(true)}
+            onMouseLeave={() => setDropdown2(false)}
+          >
+            {/* added div wrapper and onMouseEnter/onMouseLeave handlers for dropdown */}
+            <Link to="/hardwares">Hardware Projects</Link>
+            {dropdown && (
+              <div className="dropdown">
+                {/* added dropdown div */}
+                <Link to="/hardware1">Hardware 1</Link>
+                <Link to="/hardware2">Hardware 2</Link>
+                <Link to="/hardware3">Hardware 3</Link>
+              </div>
+            )}
+          </div>
           <Link className="nav__item" to="/freeprojects">
             Free Projects
           </Link>
