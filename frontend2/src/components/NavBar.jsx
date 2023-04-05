@@ -9,6 +9,7 @@ const NavBar = () => {
   const [click, setClick] = useState(false);
 
   const [dropdown, setDropdown] = useState(false);
+  const [dropdown2, setDropdown2] = useState(false);
 
   const handleNavClick = () => setClick(!click);
 
@@ -58,13 +59,18 @@ const NavBar = () => {
             onMouseLeave={() => setDropdown(false)}
           >
             {/* added div wrapper and onMouseEnter/onMouseLeave handlers for dropdown */}
-            <Link to="/softwares">Software Projects</Link>
+            <Link style={{ color: `#2c2c2c` }} to="/softwares">
+              Software Projects
+            </Link>
             {dropdown && (
               <div className="dropdown">
                 {/* added dropdown div */}
-                <Link to="/software1">Software 1</Link>
-                <Link to="/software2">Software 2</Link>
-                <Link to="/software3">Software 3</Link>
+                <Link to="/softwares">Android</Link>
+                <Link to="/softwares">Blockchain</Link>
+                <Link to="/softwares">Cloud</Link>
+                <Link to="/softwares">MatLab</Link>
+                <Link to="/softwares">Python</Link>
+                <Link to="/softwares">Web Development</Link>
               </div>
             )}
           </div>
@@ -74,13 +80,14 @@ const NavBar = () => {
             onMouseLeave={() => setDropdown2(false)}
           >
             {/* added div wrapper and onMouseEnter/onMouseLeave handlers for dropdown */}
-            <Link to="/hardwares">Hardware Projects</Link>
-            {dropdown && (
+            <Link style={{ color: `#2c2c2c` }} to="/hardwares">
+              Hardware Projects
+            </Link>
+            {dropdown2 && (
               <div className="dropdown">
                 {/* added dropdown div */}
-                <Link to="/hardware1">Hardware 1</Link>
-                <Link to="/hardware2">Hardware 2</Link>
-                <Link to="/hardware3">Hardware 3</Link>
+                <Link to="/hardwares">Drone</Link>
+                <Link to="/hardwares">IoT/Robotics</Link>
               </div>
             )}
           </div>

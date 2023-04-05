@@ -17,6 +17,7 @@ import Webbased from "./pages/Webbased";
 import Android from "./pages/Android";
 import Blockchain from "./pages/Blockchain";
 import Product from "./Product";
+import Domain from "./pages/Domain";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/createProject" element={<CreateForm />} />
             <Route path="/freeProjects" element={<Freeprojects />} />
+            <Route path="/d/" element={<Domain />} />
             <Route path="/python" element={<Python />} />
             <Route path="/webbased" element={<Webbased />} />
             <Route path="/android" element={<Android />} />

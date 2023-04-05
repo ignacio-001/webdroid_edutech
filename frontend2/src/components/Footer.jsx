@@ -7,20 +7,38 @@ const Footer = () => {
       <div className="footer__page">
         <div className="footer__box">
           <div className="illustration__wrapper">
-            <img src="https://mixkit.imgix.net/art/preview/mixkit-left-handed-man-sitting-at-a-table-writing-in-a-notebook-27-original-large.png?q=80&auto=format%2Ccompress&h=700" alt="Login"/>
+            <img
+              src="https://mixkit.imgix.net/art/preview/mixkit-left-handed-man-sitting-at-a-table-writing-in-a-notebook-27-original-large.png?q=80&auto=format%2Ccompress&h=700"
+              alt="Login"
+            />
           </div>
           <form>
             <h3>Share Your Idea</h3>
-            {/* <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-              nihil sunt distinctio animi non explicabo voluptate nobis
-              pariatur tempora dolore assumenda rem sit, quas id facilis
-              officiis autem praesentium soluta.
-            </p> */}
-            <input type="email" name="email" placeholder="Type your Email here" required/>  
-            <input type="text" name="name" placeholder="Type your Name here" required/>
-            <input type="phone" name="phone" placeholder="Type your mobile number here" required/>
-            <input type="text" name="idea" placeholder="Type your Project Idea here" required/>
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Type your Email here"
+              required
+            />
+            <input
+              type="text"
+              name="name"
+              placeholder="Type your Name here"
+              required
+            />
+            <input
+              type="phone"
+              name="phone"
+              placeholder="Type your mobile number here"
+              required
+            />
+            <input
+              type="text"
+              name="idea"
+              placeholder="Type your Project Idea here"
+              required
+            />
             <button type="submit">SUBMIT</button>
           </form>
         </div>
